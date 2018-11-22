@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -9,11 +10,20 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" All of your Plugins must be added before the following line
 
+
+" All of your Plugins must be added before the following line
 Plugin 'scrooloose/nerdtree'
+
+"Plugin 'powerline/powerline'
+"Plugin 'lokaltog/vim-powerline'
+
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
+
+Plugin 'valloric/youcompleteme'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,6 +43,13 @@ filetype plugin indent on    " required
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle<CR>
+
+set nowrap
+
+
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
 
 
