@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set t_Co=256
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -22,7 +23,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
 
 
 call vundle#end()            " required
@@ -40,7 +41,15 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 
+" pt afisare buffere
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#formatter = 'default'
+nmap <M-Left> :bprev<CR>
+nmap <M-Right> :bnext<CR>
 
+" shortcut-uri
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle<CR>
 
